@@ -306,6 +306,7 @@ class PostEmailCampaignView(APIView):
         }
         print('\n\n',emails)
         send_email_campaign_mass_mail.delay(subject, context, emails)
+        print('\n\n emails send to celery')
         return Response({'user_id': user_id}, status=status.HTTP_200_OK)
     
     def extract_emails_from_xlsx(self, xlsx_path):

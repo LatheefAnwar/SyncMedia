@@ -11,11 +11,13 @@ BATCH_SIZE = 100
 
 @shared_task
 def send_email_campaign_mass_mail(subject, context, emails):
-
-    email_batched = [emails[i:i+BATCH_SIZE] for i in range(0,len(emails), BATCH_SIZE)]
+    print('email length',len(emails))
+    email_batched = list(emails[i:i+BATCH_SIZE] for i in range(0,len(emails), BATCH_SIZE))
     print('email batched',email_batched)
-    # for batch in email_batched:
-    #     send_single_email.s(subject, context, batch).delay()
+    print('\n\n sending to for loop')
+    for batch in email_batched:
+        send_single_email.delay(subject, context, batch)
+        print('\n\nbatch is ',batch)
 
 
 @shared_task
