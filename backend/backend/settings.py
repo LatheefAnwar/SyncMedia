@@ -166,7 +166,7 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
-FB_TEMP_PATH = 'C:/Users/Anwar Latheef/aishwarya/env/fb_temp'
+FB_TEMP_PATH = 'D:/aishwarya/env/fb_temp'
 INSTAGRAM_IMAGE_URL = 'https://cdn.ebaumsworld.com/mediaFiles/picture/1151541/84693449.png'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -201,8 +201,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'syncmediahub4@gmail.com'
-EMAIL_HOST_PASSWORD = 'nquatfcizdatjgfh'
+EMAIL_HOST_USER = 'YOUR EMAIL'
+EMAIL_HOST_PASSWORD = 'YOUR PASSWORD'
 EMAIL_USE_SSL = False
 
 
